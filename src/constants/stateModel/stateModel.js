@@ -6,3 +6,8 @@ export const TodoInitialState = Immutable.fromJS({
     text: ''
   }
 });
+
+export const SimpleFormInitialState = {
+    firstName: 'Test',
+    lastName: 'Test2'
+}

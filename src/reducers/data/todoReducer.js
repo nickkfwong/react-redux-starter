@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions';
-import { TodoInitialState } from '../../constants/models';
+import { TodoInitialState } from '../../constants/stateModel/stateModel';
 import { CREATE_TODO, DELETE_TODO, CHANGE_TEXT } from '../../constants/actionTypes';
 import { fromJS } from 'immutable';
 
