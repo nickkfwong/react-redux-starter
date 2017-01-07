@@ -3,10 +3,10 @@ import createLogger from 'redux-logger';
 import Immutable from 'immutable';
 import rootReducer from '../reducers';
 
-const initialState = Immutable.Map();
+const initialState = {};
 
 export default createStore(
   rootReducer,
   initialState,
-  applyMiddleware(createLogger({ stateTransformer: state => state.toJS() }))
+  applyMiddleware(createLogger())
 )

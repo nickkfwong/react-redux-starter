@@ -1,17 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TodoHeaderContainer from '../../containers/TodoHeaderContainer';
-import TodoListContainer from '../../containers/TodoListContainer';
-import SimpleForm from '../../containers/Form/SimpleFormContainer';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import MyTable from '../../containers/MyTableContainer';
+import LoadDataForm from '../../containers/LoadTableDataFormContainer';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+// Needed for onTouchTap 
+// http://stackoverflow.com/a/34015469/988941 
+injectTapEventPlugin();
 
 const App = (props) => (
-    <div>
-        <h1>Test</h1>
-        <TodoHeaderContainer/>
-        <TodoListContainer/>
-        <p/>
-        <SimpleForm/>
-    </div>
+    <MuiThemeProvider>
+        <div>
+            <h1>Test</h1>
+            <LoadDataForm/>
+            <MyTable />
+        </div>
+    </MuiThemeProvider>
 );
 
 export default App;
