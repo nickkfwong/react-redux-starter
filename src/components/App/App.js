@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import MyTable from '../../containers/MyTableContainer';
 import LoadDataForm from '../../containers/LoadTableDataFormContainer';
+import TableForm from '../../containers/TableFormContainer';
+
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 // Needed for onTouchTap 
@@ -14,7 +16,7 @@ const App = (props) => (
         <div>
             <h1>Test</h1>
             <LoadDataForm/>
-            <MyTable />
+            <TableForm/>
         </div>
     </MuiThemeProvider>
 );

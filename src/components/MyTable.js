@@ -26,6 +26,7 @@ const ModelRow = ({ model, row, rowId }) => (
 class MyTable extends React.Component{
     render(){
         const { model, data } = this.props;
+        console.log('xxxxxxxxx',data);
         return(
             <table>
                 <tbody>
