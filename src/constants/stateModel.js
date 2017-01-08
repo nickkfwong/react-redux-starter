@@ -3,6 +3,6 @@ export const SimpleFormInitialState = {
     lastName: ''
 }
 
-export const TableInitialState = {
+export const MyTableInitialState = {
     data: []
 }

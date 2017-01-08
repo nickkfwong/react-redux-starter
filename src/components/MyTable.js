@@ -16,7 +16,7 @@ const ModelRow = ({ model, row, rowId }) => (
         {
             model.map((col, colIdx) => 
                 <td key={colIdx}>
-                    <TextField key={`${rowId}_${colIdx}`} name={`${col.name}_${rowId}_${colIdx}`} defaultValue={row[col.name]}/>
+                    <TextField key={`${rowId}_${colIdx}`} name={`${col.name}_${rowId}_${colIdx}`} defaultValue={row.trade[col.name]}/>
                 </td>
             )
         }
@@ -26,7 +26,6 @@ const ModelRow = ({ model, row, rowId }) => (
 class MyTable extends React.Component{
     render(){
         const { model, data } = this.props;
-        console.log('xxxxxxxxx',data);
         return(
             <table>
                 <tbody>

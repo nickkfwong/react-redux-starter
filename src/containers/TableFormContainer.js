@@ -15,14 +15,14 @@ const mapStateToProps = (state) => ({
 // Action creator
 const mapDispatchToProps = (dispatch) => ({
     onSubmitForm : (values) => {
-        console.log(values);
+        console.log('on form submit.........',values);
     },
 });
 
 const form = reduxForm({
   form: 'tableFrom',     // a unique identifier for this form
   initialValues: {
-    data:[]
+    trades:[]
 }
 })(TableForm)
 

@@ -3,12 +3,14 @@ import { reduxForm, initialize } from 'redux-form';
 import LoadTableTableForm from '../components/LoadTableDataForm';
 import { requestData } from '../actions';
 
-const testData = [
-    { ric:'0045.hk', price:500, date:Date()},
-    { ric:'00206.hk', price:500, date:Date()},
-    { ric:'0017.hk', price:500, date:Date()},
-    { ric:'0010.hk', price:500, date:Date()}
-];
+const data = {
+    trades:[
+        { ric:'0045.hk', price:500, date:Date()},
+        { ric:'00206.hk', price:500, date:Date()},
+        { ric:'0017.hk', price:500, date:Date()},
+        { ric:'0010.hk', price:500, date:Date()}
+    ]
+};
 
 
 const mapStateToProps = (state) => ({
@@ -19,10 +21,10 @@ const mapDispatchToProps = (dispatch) => ({
     onSubmitForm : (values) => {
         dispatch(requestData({
             param: values,
-            data:  testData
+            data
         }));
 
-        dispatch(initialize('tableFrom', {data: testData}, false))
+        dispatch(initialize('tableFrom', data, false))
     },
 });
 
